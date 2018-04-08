@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dojo Survey!</h1>
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %} {% endif %} {% endwith %}
+    <form action='/process' method='POST'>
+        Name:<input type="text" name="name">
+        <p></p>
+        Dojo Location: <select class="" name="location">
+          <option value="Seattle">Seattle</option>
+          <option value="San Jose">San Jose</option>
+        </select>
+        <p></p>
+        Favorite Language: <select class="" name="language">
+          <option value="python">python</option>
+          <option value="javascript">javascript</option>
+          <option value="c#">c#</option>
+        </select>
+        <p></p>
+        Comment (optional):
+        <p></p>
+        <textarea name="comment" rows="8" cols="80"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>

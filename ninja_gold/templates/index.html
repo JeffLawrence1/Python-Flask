@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome Ninja! You currently have {{gold}} gold!</h1>
+    <form action="/process_money" method="post" style="display: inline-block; border: 1px solid black; padding: 50px">
+        <h1>Farm</h1>
+        <input type="hidden" name="building" value="farm" />
+        <input type="submit" value="Find Gold!" />
+    </form>
+    <form action="/process_money" method="post" style="display: inline-block; border: 1px solid black; padding: 50px">
+        <h1>Cave</h1>
+        <input type="hidden" name="building" value="cave" />
+        <input type="submit" value="Find Gold!" />
+    </form>
+    <form action="/process_money" method="post" style="display: inline-block; border: 1px solid black; padding: 50px">
+        <h1>House</h1>
+        <input type="hidden" name="building" value="house" />
+        <input type="submit" value="Find Gold!" />
+    </form>
+    <form action="/process_money" method="post" style="display: inline-block; border: 1px solid black; padding: 50px">
+        <h1>Casino</h1>
+        <input type="hidden" name="building" value="casino" />
+        <input type="submit" value="Find Gold!" />
+    </form>
+    <div style="outline: 1px solid black; height: 200px; width: 750px; overflow: scroll; margin-top: 20px;">
+
+        {{activities | safe}}
+
+    </div>
+    <form action="/reset" method="post" style="display: inline-block; border: 1px solid black; padding: 20px">
+        <input type="hidden" name="reset" value="" />
+        <input type="submit" value="Reset" />
+    </form>
+</body>
+
+</html>

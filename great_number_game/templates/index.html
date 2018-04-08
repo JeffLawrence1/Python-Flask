@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to the great number game!</h1>
+    <h2>I am thinking of a number between 1 and 100</h2>
+    <h3>Take a guess!</h3>
+    <h2>{{message}}</h2>
+    <form action="/guess" method="post">
+        <input type="text" name="number" value="{{hide}}">
+        <input type="submit" name="submit" value="{{button}}">
+    </form>
+
+</body>
+
+</html>
